@@ -1,0 +1,10 @@
+1.  \project_{ssn} (\select_{customerName='John Smith'} customer);
+
+2.  \project_{cardNumber1} (\rename_{ssn1, cardNumber1} ownership \join_{customerName='John Smith'and ssn1 = ssn} customer);
+
+3.  \select_{date>'2015-1-2' and cardNumber=1236666} transaction;
+
+4.  \project_{cardNumber1, creditLimit} (\rename_{ssn1, cardNumber1} ownership    \join_{customerName='John Smith'and ssn1 = ssn} customer \join_{cardNumber1=cardNumber} card);
+
+5.  \project_{venderName} (\rename_{venderId1, venderName, location} vender \join_{date='2015-1-2' and venderId1=venderId} transaction);
+
